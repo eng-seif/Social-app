@@ -22,6 +22,7 @@ const ProtectedRoute = ({ children }) => {
 };
 
 const routes = createBrowserRouter([
+  // ================= MAIN APP LAYOUT (With Navbar) =================
   {
     path: "/",
     element: <MainLayout />,
@@ -30,7 +31,6 @@ const routes = createBrowserRouter([
         index: true,
         element: <ProtectedRoute><Home /></ProtectedRoute>
       },
-      
       {
         path: "community",
         element: <ProtectedRoute><Community /></ProtectedRoute>
@@ -39,9 +39,10 @@ const routes = createBrowserRouter([
         path: "saved-posts",
         element: <ProtectedRoute><SavedPosts /></ProtectedRoute>
       },
-      { path: "myposts", element: <ProtectedRoute><MyPosts /></ProtectedRoute> },
-      { path: "login", element: <Login /> },
-      { path: "register", element: <Register /> },
+      { 
+        path: "myposts", 
+        element: <ProtectedRoute><MyPosts /></ProtectedRoute> 
+      },
       {
         path: "Profile",
         element: <ProtectedRoute><Profile /></ProtectedRoute>
@@ -59,6 +60,16 @@ const routes = createBrowserRouter([
         element: <ProtectedRoute><PostDetails /></ProtectedRoute>
       }
     ]
+  },
+
+  // ================= AUTH LAYOUT (No Navbar) =================
+  { 
+    path: "/login", 
+    element: <Login /> 
+  },
+  { 
+    path: "/register", 
+    element: <Register /> 
   }
 ]);
 
