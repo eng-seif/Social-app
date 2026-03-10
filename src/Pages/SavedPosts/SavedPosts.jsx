@@ -5,7 +5,7 @@ import { Bookmark, BookmarkX } from 'lucide-react';
 
 import { LeftSidebar } from '../../Components/LeftSidebar/LeftSidebar';
 import RightSidebar from '../../Components/RightSidebar/RightSidebar';
-import PostCard from '../../Components/post/postCard';
+import PostCard from '../../Components/post/PostCard';
 import SkeletonComponent from '../../Components/skelton/Skelton';
 
 export default function SavedPosts() {
